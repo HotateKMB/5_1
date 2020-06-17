@@ -1,11 +1,11 @@
-import static org.junit.Assert.*;
 import static org.hamcrest.CoreMatchers.*;
+import static org.junit.Assert.*;
 
 import org.junit.Test;
 
 public class IntToEngTest {
 	@Test
-	 
+
 	 public void IntToEngで0を入力したらzeroと帰ってくる() {
 	  IntToEng ite = new IntToEng();
 	  String expected = "zero";
@@ -38,7 +38,7 @@ public class IntToEngTest {
 	 }
 
 	 @Test
-	 public void IntToEngで10000を入力したらzeroと帰ってくる() {
+	 public void IntToEngで10000を入力したら英語で帰ってくる() {
 	  IntToEng ite = new IntToEng();
 	  String expected = "ten thousand ";
 	  String actual = ite.translateEng(10000);
@@ -46,7 +46,7 @@ public class IntToEngTest {
 	 }
 
 	 @Test
-	 public void IntToEngで100000を入力したらzeroと帰ってくる() {
+	 public void IntToEngで100000を入力したら英語で帰ってくる() {
 	  IntToEng ite = new IntToEng();
 
 	  String expected = "one hundred thousand ";
@@ -55,7 +55,7 @@ public class IntToEngTest {
 	 }
 
 	 @Test
-	 public void IntToEngで1000000を入力したらzeroと帰ってくる() {
+	 public void IntToEngで1000000を入力したら英語で帰ってくる() {
 	  IntToEng ite = new IntToEng();
 	  String expected = "one million ";
 	  String actual = ite.translateEng(1000000);
@@ -69,6 +69,6 @@ public class IntToEngTest {
 	  String actual = ite.translateEng(2147483647);
 	  assertThat(actual, is(expected));
 	 }
-	
+
 
 }
