@@ -19,8 +19,10 @@ public class IntToEng {
 
 		  if (n==0) {
 		       return eng0[0];
-		  } else
+		  } else if(n>0) {
 			return translate(n);
+		  }
+		  return "";
 
      	}
 
